@@ -10,7 +10,7 @@ from setuptools.command.test import test
 from distutils.version import LooseVersion
 
 
-class CMakeExtension(Extension):
+class CMakeExtension(Extension, object):
     def __init__(self, name, sourcedir=''):
         super(CMakeExtension, self).__init__(name, sources=[])
         self.sourcedir = os.path.abspath(sourcedir)
